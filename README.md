@@ -55,7 +55,7 @@ If you experience issues, consider the following:
 
 ## 📄 License
 
-VranCe-Md is released under the [MIT License](LICENSE). You can use or modify it as per the license guidelines.
+MASTER-IP_MD is released under the [MIT License](LICENSE). You can use or modify it as per the license guidelines.
 
 ## ✉️ Need Help?
 
