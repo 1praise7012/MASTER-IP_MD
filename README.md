@@ -1,17 +1,23 @@
 <a><img src='https://files.catbox.moe/w1lfoq.jpg'/></a>
+<!-- HACKER BANNER -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=220&text=MASTER-IP-MD&fontSize=55&fontAlignY=35"/>
+
+<!-- TYPING EFFECT -->
 <p align="center">
-<img src="https://readme-typing-svg.demolab.com?
-font=Black+Ops+One
-&size=70
-&pause=1000
-&center=true
-&vCenter=true
-&width=1000
-&height=200
-&random=true
-&lines=MASTER-IP-MD;
-THE+BEST+PROGRAMMER;
-YOUNG+GENIUS+🔥;
-MADE+IT+WITH+💙"
-alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=60&pause=1000&center=true&vCenter=true&width=1000&height=160&random=true&lines=MASTER-IP-MD;THE+BEST+PROGRAMMER;YOUNG+GENIUS+🔥;MADE+IT+WITH+💙;WELCOME+TO+DIGITAL+PLAYGROUND"/>
 </p>
+
+<!-- NEON LINE -->
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=3"/>
+</p>
+
+---
+
+## 👨‍💻 About Me
+
+```txt
+💻 Tech Creator  
+🔥 Young Genius  
+🚀 Building Digital Playground  
+🧠 Learning • Coding • Creating
