@@ -98,7 +98,7 @@ module.exports = VranCe = async (VranCe, m, chatUpdate, mek, store) => {
     }
     const isCmd = body.startsWith(prefix)
     const command = isCmd ? body.slice(prefix.length).trim().split(' ')[0].toLowerCase() : ''
-    const pushname = m.pushName || "No Name"
+    const pushname = m.pushName || "MASTER-IP"
     const botNumber = await VranCe.decodeJid(VranCe.user.id)
     const bulan = moment.tz('Africa/Harare').format('DD/MMMM')
     const tahun = moment.tz('Africa/Harare').format('YYYY')
