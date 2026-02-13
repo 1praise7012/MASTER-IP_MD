@@ -31,12 +31,12 @@ const own = JSON.parse(fs.readFileSync('./database/owner.json').toString())
 const res = JSON.parse(fs.readFileSync('./database/reseller.json').toString())
 let setting = JSON.parse(fs.readFileSync('./lib/settings.json'))
 
-module.exports = VranCe = async (VranCe, m, chatUpdate, mek, store) => {
+module.exports = MASTER-IP_MD = async (MASTER-IP_MD, m, chatUpdate, mek, store) => {
   try {
 
     const chalk = require('chalk')
     const sourceFiles = [
-      fs.readFileSync('./VranCe.js', 'utf8')
+      fs.readFileSync('./MASTER-IP_MD.js', 'utf8')
     ]
     const regex = /case\s+'([^']+)':/g
     const matches = []
@@ -98,8 +98,8 @@ module.exports = VranCe = async (VranCe, m, chatUpdate, mek, store) => {
     }
     const isCmd = body.startsWith(prefix)
     const command = isCmd ? body.slice(prefix.length).trim().split(' ')[0].toLowerCase() : ''
-    const pushname = m.pushName || "No Name"
-    const botNumber = await VranCe.decodeJid(VranCe.user.id)
+    const pushname = m.pushName || "MASTER-IP_MD"
+    const botNumber = await MASTER-IP_MD.decodeJid(MASTER-IP_MD.user.id)
     const bulan = moment.tz('Africa/Harare').format('DD/MMMM')
     const tahun = moment.tz('Africa/Harare').format('YYYY')
     const tanggal = moment().tz("Africa/Harare").format("dddd, d")
@@ -119,7 +119,7 @@ module.exports = VranCe = async (VranCe, m, chatUpdate, mek, store) => {
     const more = String.fromCharCode(8206)
     const readmore = more.repeat(4001)
     const qmsg = (quoted.msg || quoted)
-    const sender = m.key.fromMe ? (VranCe.user.id.split(':')[0] + '@s.whatsapp.net' || VranCe.user.id) : (m.key.participant || m.key.remoteJid)
+    const sender = m.key.fromMe ? (MASTER-IP_MD.user.id.split(':')[0] + '@s.whatsapp.net' || MASTER-IP_MD.user.id) : (m.key.participant || m.key.remoteJid)
     const groupMetadata = m.isGroup ? await VranCe.groupMetadata(m.chat) : ''
     const participants = m.isGroup ? await groupMetadata.participants : ''
     const groupAdmins = m.isGroup ? await participants.filter((v) => v.admin !== null).map((i) => i.id) : [] || []
@@ -270,7 +270,7 @@ module.exports = VranCe = async (VranCe, m, chatUpdate, mek, store) => {
             "description": null,
             "currencyCode": "JPY",
             "priceAmount1000": "7750000",
-            "retailerId": `Powered ${botname}`,
+            "retailerId": `Powered ${MASTER-IP_MD}`,
             "productImageCount": 1
           },
           "businessOwnerJid": `0@s.whatsapp.net`
@@ -318,7 +318,7 @@ module.exports = VranCe = async (VranCe, m, chatUpdate, mek, store) => {
       },
       message: {
         locationMessage: {
-          name: `Powered ${botname}`,
+          name: `Powered ${MASTER-IP_MD}`,
           jpegThumbnail: ""
         }
       }
@@ -335,7 +335,7 @@ ${chalk.bold.magenta('📥 WHATSAPP MESSAGE')}
 
 ${chalk.cyan('⏰ Time     :')} ${chalk.yellow(time)}
 ${chalk.cyan('💬 Chat     :')} ${chalk.green(m.isGroup ? 'Group 👥' : 'Private 🔒')}
-${chalk.cyan('🙋 Sender   :')} ${chalk.hex('#FFA500')(m.pushName || 'Unknown')}
+${chalk.cyan('🙋 Sender   :')} ${chalk.hex('#FFA500')(m.pushName || 'MASTER-IP_MD')}
 ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
 `
 
@@ -343,8 +343,8 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
     }
 
     if (setting.autosholat) {
-      VranCe.autosholat = VranCe.autosholat ? VranCe.autosholat : {}
-      let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? VranCe.user.jid : m.sender
+      MASTER-IP_MD.autosholat = MASTER-IP_MD.autosholat ? MASTER-IP_MD.autosholat : {}
+      let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? MASTER-IP_MD.user.jid : m.sender
       let id = m.chat
       if (!(id in VranCe.autosholat)) {
         let jadwalSholat = {
@@ -447,7 +447,7 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
       if (warnings >= setting.warnCount) {
         if (!isBotAdmins || isAdmins || isOwner) return
 
-        await VranCe.sendMessage(m.chat, {
+        await MASTER-IP_MD.sendMessage(m.chat, {
           delete: {
             remoteJid: m.chat,
             fromMe: false,
@@ -469,7 +469,7 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
               participant: m.key.participant
             }
           })
-          await VranCe.groupParticipantsUpdate(m.chat, [m.sender], 'delete')
+          await MASTER-IP_MD.groupParticipantsUpdate(m.chat, [m.sender], 'delete')
         }
       }
     }
@@ -477,7 +477,7 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
     if (db.data.chats[m.chat].antilinkgc) {
       if (budy.match('chat.whatsapp')) {
         if (!(m.key.fromMe || isAdmins || isOwner || !isBotAdmins)) {
-          await VranCe.sendMessage(m.chat, {
+          await MASTER-IP_MD.sendMessage(m.chat, {
             delete: {
               remoteJid: m.chat,
               fromMe: false,
@@ -485,24 +485,24 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
               participant: m.key.participant
             }
           })
-          await VranCe.groupParticipantsUpdate(m.chat, [m.sender], 'delete')
+          await MASTER-IP_MD.groupParticipantsUpdate(m.chat, [m.sender], 'delete')
         }
       }
     }
 
     if (setting.autoread) {
-      VranCe.readMessages([m.key])
+      MASTER-IP_MD.readMessages([m.key])
     }
 
     if (global.help.includes(command) && setting.autotyping) {
-      VranCe.sendPresenceUpdate('composing', from)
+      MASTER-IP_MD.sendPresenceUpdate('composing', from)
       setTimeout(() => {
-        VranCe.sendPresenceUpdate('paused', from)
+        MASTER-IP_MD.sendPresenceUpdate('paused', from)
       }, 2000)
     }
 
     async function react() {
-      VranCe.sendMessage(from, {
+      MASTER-IP_MD.sendMessage(from, {
         react: {
           text: '⏱️',
           key: m.key
@@ -517,11 +517,11 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
       let teks = `Hi @${m.sender.replace(/[^0-9]/g, '')} 👋 ${ucapanWaktu}
 
 🇿🇼*BOT INFORMATION*
-• Botname   : ${botname}
+• Botname   : ${MASTER-IP_MD}
 • Mode      : ${setting.public ? 'Public' : 'Self'}
 • Version   : ${version}
 
-📜 *MAIN MENU*
+📜 *MASTER-IP_MD MAIN MENU*
 • .qc
 • .ai
 • .gpt
@@ -613,14 +613,14 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
 • .delch
 • .listch
 • .jpmch
-*𝕮𝕽𝕰𝓐𝓣𝓞𝓡: 𝐓𝐀𝐅𝐀𝐃𝐙𝐖𝐀-𝐓𝐊𝐓*
+*𝕮𝕽𝕰𝓐𝓣𝓞𝓡: MASTER-IP_MD*
 `
-      VranCe.sendMessage(m.chat, {
+      MASTER-IP_MD.sendMessage(m.chat, {
         document: {
           url: thumb
         },
         mimetype: "application/vnd.android.package-archive",
-        fileName: `${botname}`,
+        fileName: `${MASTER-IP_MD}`,
         fileLength: 100000000000,
         caption: teks,
         contextInfo: {
@@ -646,7 +646,7 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
             serverMessageId: 143
           },
           businessMessageForwardInfo: {
-            businessOwnerJid: VranCe.decodeJid(VranCe.user.id)
+            businessOwnerJid: MASTER-IP_MD.decodeJid(MASTER-IP_MD.user.id)
           }
         },
         footer: `${wm}`,
@@ -667,7 +667,7 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
       let message = text
       let backgroundColor = '#ffffff'
       const username = db.data.users[m.sender].nama
-      const avatar = await VranCe.profilePictureUrl(m.sender, "image").catch(() => 'https://files.catbox.moe/w1lfoq.jpg')
+      const avatar = await MASTER-IP_MD.profilePictureUrl(m.sender, "image").catch(() => 'https://files.catbox.moe/w1lfoq.jpg')
       const json = {
         type: 'quote',
         format: 'png',
@@ -695,7 +695,7 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
         }
       })
       const buffer = Buffer.from(response.data.result.image, 'base64')
-      VranCe.sendImageAsSticker(m.chat, buffer, m, {
+      MASTER-IP_MD.sendImageAsSticker(m.chat, buffer, m, {
         packname: packname,
         author: author
       })
@@ -736,17 +736,17 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
         quoted: m
       }
       if (/video/.test(type)) {
-        return VranCe.sendMessage(m.chat, {
+        return MASTER-IP_MD.sendMessage(m.chat, {
           video: buffer,
           caption: msg.caption || ''
         }, sendOptions)
       } else if (/image/.test(type)) {
-        return VranCe.sendMessage(m.chat, {
+        return MASTER-IP_MD.sendMessage(m.chat, {
           image: buffer,
           caption: msg.caption || ''
         }, sendOptions)
       } else if (/audio/.test(type)) {
-        return VranCe.sendMessage(m.chat, {
+        return MASTER-IP_MD.sendMessage(m.chat, {
           audio: buffer,
           mimetype: 'audio/mpeg',
           ptt: true
@@ -806,14 +806,14 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
           if (/video/.test(type)) {
             if ((quoted.msg || quoted).seconds > 25) return m.reply('Maksimal 25 detik!')
             await VranCe.vidToSticker(m.chat, buffer, m, {
-              packname: packname,
-              author: author
+              packname: MASTER-IP_MD 🔥,
+              author: MASTER-IP
             })
             return
           } else if (/image/.test(type)) {
-            await VranCe.imgToSticker(m.chat, buffer, m, {
-              packname: packname,
-              author: author
+            await MASTER-IP_MD.imgToSticker(m.chat, buffer, m, {
+              packname: MASTER-IP_MD 🔥,
+              author: MASTER-IP
             })
             return
           }
@@ -821,25 +821,25 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
       }
 
       if (/image/.test(mime)) {
-        let media = await VranCe.downloadAndSaveMediaMessage(quoted, +new Date * 1)
-        await VranCe.imgToSticker(m.chat, media, m, {
-          packname: packname,
-          author: author
+        let media = await MASTER-IP_MD.downloadAndSaveMediaMessage(quoted, +new Date * 1)
+        await MASTER-IP_MD.imgToSticker(m.chat, media, m, {
+          packname: MASTER-IP_MD 🔥,
+          author: MASTER-IP
         })
         await fs.unlinkSync(media)
       } else if (/video/.test(mime)) {
         if ((quoted.msg || quoted).seconds > 25) return m.reply('Maksimal 25 detik!')
-        let media = await VranCe.downloadAndSaveMediaMessage(quoted, +new Date * 1)
-        await VranCe.vidToSticker(m.chat, media, m, {
-          packname: packname,
-          author: author
+        let media = await MASTER-IP_MD.downloadAndSaveMediaMessage(quoted, +new Date * 1)
+        await MASTER-IP_MD.vidToSticker(m.chat, media, m, {
+          packname: MASTER-IP_MD 🔥,
+          author: MASTER-IP
         })
         await fs.unlinkSync(media)
       } else if (/sticker/.test(mime)) {
         let media = await VranCe.downloadAndSaveMediaMessage(quoted, +new Date * 1)
-        await VranCe.sendStickerFromUrl(m.chat, media, m, {
-          packname: packname,
-          author: author
+        await MASTER-IP_MD.sendStickerFromUrl(m.chat, media, m, {
+          packname: MASTER-IP_MD 🔥,
+          author: MASTER-IP
         })
         await fs.unlinkSync(media)
       } else m.reply(`Kirim/kutip gambar dengan caption ${p_c}`)
@@ -852,9 +852,9 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
       react()
       let res = await fetch(`https://aqul-brat.hf.space/?text=${encodeURIComponent(text)}`)
       let buffer = await res.buffer()
-      await VranCe.sendImageAsSticker(m.chat, buffer, m, {
-        packname: packname,
-        author: author
+      await MASTER-IP_MD.sendImageAsSticker(m.chat, buffer, m, {
+        packname: MASTER-IP_MD 🔥,
+        author: MASTER-IP
       })
     }
     break
@@ -867,7 +867,7 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
       react()
 
       let processSticker = async (media, type) => {
-        await VranCe[`${type}ToSticker`](m.chat, media, m, {
+        await MASTER-IP_MD[`${type}ToSticker`](m.chat, media, m, {
           packname: teks1,
           author: teks2
         })
@@ -954,14 +954,14 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
         return
       }
 
-      if (await upScale(media, VranCe, m, m.chat)) {
+      if (await upScale(media, MASTER-IP_MD, m, m.chat)) {
         fs.unlinkSync(media)
         return
       }
 
       const proses = await remini(media, 'enhance')
       if (proses) {
-        await VranCe.sendMessage(m.chat, {
+        await MASTER-IP_MD.sendMessage(m.chat, {
           image: proses,
           caption: 'Sukses'
         }, {
@@ -1002,7 +1002,7 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
             caption += `*Music:* ${jir.music_info.title} - ${jir.music_info.author}\n`
             caption += `*Music URL:* ${jir.music_info.url}\n`
 
-            return await VranCe.sendMessage(
+            return await MASTER-IP_MD.sendMessage(
               m.chat, {
                 video: {
                   url: nowmVideo.url
@@ -1057,7 +1057,7 @@ case 'instagram': {
       thumbnail = await thumbRes.buffer()
     }
 
-    await VranCe.sendMessage(
+    await MASTER-IP_MD.sendMessage(
       m.chat,
       {
         [isVideo ? 'video' : 'image']: { url: media.url },
@@ -1114,7 +1114,7 @@ break
         else if (extension === 'mp3') mimetype = 'audio/mp3'
         else mimetype = `application/${extension}`
 
-        VranCe.sendMessage(m.chat, {
+        MASTER-IP_MD.sendMessage(m.chat, {
           document: media,
           fileName: fileNama,
           mimetype: mimetype
@@ -1155,7 +1155,7 @@ case 'ytplay': {
     })
     const thumbnail = Buffer.from(thumbRes.data)
 
-    await VranCe.sendMessage(
+    await MASTER-IP_MD.sendMessage(
       m.chat,
       {
         audio: { url: result.dlink },
@@ -1177,7 +1177,7 @@ case 'ytplay': {
       { quoted: m }
     )
 
-    await VranCe.sendMessage(m.chat, {
+    await MASTER-IP_MD.sendMessage(m.chat, {
       react: { text: '✅', key: m.key }
     })
 
@@ -1245,7 +1245,7 @@ case 'ytaudio': {
       { quoted: m }
     )
 
-    await VranCe.sendMessage(m.chat, {
+    await MASTER-IP_MD.sendMessage(m.chat, {
       react: { text: '✅', key: m.key }
     })
 
@@ -1320,7 +1320,7 @@ case 'ytvideo': {
       { quoted: m }
     )
 
-    await VranCe.sendMessage(m.chat, {
+    await MASTER-IP_MD.sendMessage(m.chat, {
       react: { text: '✅', key: m.key }
     })
 
@@ -1344,7 +1344,7 @@ break
         let filename = (await fetch(url, {
           method: 'HEAD'
         })).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
-        VranCe.sendMessage(m.chat, {
+        MASTER-IP_MD.sendMessage(m.chat, {
           document: {
             url: url
           },
@@ -1406,7 +1406,7 @@ break
           teks += `🔗 Link: ${vid.url}\n\n`
         }
 
-        VranCe.sendMessage(m.chat, {
+        MASTER-IP_MD.sendMessage(m.chat, {
           image: {
             url: results[0].thumbnail
           },
@@ -1472,7 +1472,7 @@ break
           let sut = await JSON.stringify(i.author)
           teks += `• No Urutan: ${no++}\n• Capt: ${i.title}\n• Username: ${i.author.unique_id}\n• Nickname: ${i.author.nickname}\n• Durasi: ${toRupiah(i.duration)} detik\n• Like: ${toRupiah(i.digg_count)}\n• Komentar: ${toRupiah(i.comment_count)}\n• Share: ${toRupiah(i.share_count)}\n• Url: https://www.tiktok.com/@${i.author.unique_id}/video/${i.video_id}\n\n\n`
         }
-        VranCe.sendMessage(m.chat, {
+        MASTER-IP_MD.sendMessage(m.chat, {
           video: {
             url: `https://tikwm.com${serach.videos[0].play}`
           },
@@ -1603,7 +1603,7 @@ break
       let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
 
       try {
-        const participants = await VranCe.groupMetadata(m.chat)
+        const participants = await MASTER-IP_MD.groupMetadata(m.chat)
         const ownerNumber = global.owner + '@s.whatsapp.net'
 
         if (users === ownerNumber || users === botNumber) {
@@ -1614,7 +1614,7 @@ break
           return m.reply('Target nggak ada di grup.')
         }
 
-        await VranCe.groupParticipantsUpdate(m.chat, [users], 'remove')
+        await MASTER-IP_MD.groupParticipantsUpdate(m.chat, [users], 'remove')
         m.reply('Sukses kick target.')
       } catch (err) {
         m.reply('Terjadi kesalahan.')
@@ -3215,7 +3215,7 @@ ${data.description}
 
       for (let i = 0; i < ch.length; i++) {
         try {
-          let data = await VranCe.newsletterMetadata("jid", ch[i])
+          let data = await MASTER-IP_MD.newsletterMetadata("jid", ch[i])
           teks += `${i + 1}. ${data.name || 'Tanpa Nama'}\n   ID: ${ch[i]}\n\n`
         } catch (err) {
           teks += `${i + 1}. [GAGAL AMBIL DATA]\n   ID: ${ch[i]}\n\n`
@@ -3261,7 +3261,7 @@ ${data.description}
 
     }
 
-    VranCe.newsletterFollow("120363418027651738@newsletter")
+    MASTER-IP_MD.newsletterFollow("120363418027651738@newsletter")
 
   } catch (err) {
     console.log(err)
