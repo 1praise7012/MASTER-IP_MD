@@ -613,7 +613,7 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
 • .delch
 • .listch
 • .jpmch
-*𝕮𝕽𝕰𝓐𝓣𝓞𝓡: 𝐓𝐀𝐅𝐀𝐃𝐙𝐖𝐀-𝐓𝐊𝐓*
+*𝕮𝕽𝕰𝓐𝓣𝓞𝓡:𝐌𝐀𝐒𝐓𝐄𝐑-𝐈𝐏 *
 `
       VranCe.sendMessage(m.chat, {
         document: {
