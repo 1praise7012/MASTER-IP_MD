@@ -1,19 +1,19 @@
 const fs = require('fs')
 const pack = require('./package.json')
 global.pairing = false // false = pairing code | true = scan QR
-global.PaiCode = "TKTTECH1"
+global.PaiCode = "MASTERIP"
 global.sessionName = "session" // Nama file session
 
 global.botname = "𝐌𝐀𝐒𝐓𝐄𝐑-𝐈𝐏_𝐌𝐃" // Bot name
-global.ownername = "𝐌𝐀𝐒𝐓𝐄𝐑-𝐈𝐏 &𝐓𝐀𝐅𝐀𝐃𝐙𝐖𝐀-𝐓𝐊𝐓_𝐓𝐄𝐂𝐇🇿🇼" // Owner name
+global.ownername = "𝐌𝐀𝐒𝐓𝐄𝐑-𝐈𝐏 & 𝐓𝐊𝐓_𝐓𝐄𝐂𝐇🇿🇼" // Owner name
 global.owner = "263779540058" // Owner number
 global.botNumber = "263xxx" //  Bot number
 global.version = pack.version // Version
 
-global.packname = "TKT-TECH◇Script" // Sticker packname 
-global.author = "TKT-TECH" // Sticker author
+global.packname = "MASTER-IP◇Script" // Sticker packname 
+global.author = "MASTER-IP" // Sticker author
 
-global.wm = "TKT-TECH" // Watermark thumbnail
+global.wm = "MASTER-IP" // Watermark thumbnail
 global.chjid = "120363418027651738" // Channel Id Gaush pakai @
 global.gcjid = "120363418027651738" // Group Id Gaush pakai @
 global.sch = "https://whatsapp.com/channel/0029Vb5vbMM0LKZJi9k4ED1a"
@@ -32,4 +32,5 @@ fs.watchFile(file, () => {
   console.log(`Update ${__filename}`)
   delete require.cache[file]
   require(file)
+
 })
