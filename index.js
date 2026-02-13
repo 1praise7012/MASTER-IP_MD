@@ -23,7 +23,7 @@ const {
   pickRandom
 } = require('./lib/myfunc')
 
-const jam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('HH:mm')
+const jam = moment(Date.now()).tz('Africa/Harare').locale('id').format('HH:mm')
 let setting = JSON.parse(fs.readFileSync('./lib/settings.json'));
 let session = `${sessionName}`
 let sesiPath = './' + session
