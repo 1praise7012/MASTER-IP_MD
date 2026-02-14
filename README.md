@@ -1,6 +1,21 @@
 <a><img src='https://files.catbox.moe/w1lfoq.jpg'/></a>
 <!-- ========== HACKER BANNER ========== -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=220&text=MASTER-IP-MD&fontSize=55&fontAlignY=35"/>
+<!-- ========== HACKER BANNER ========== -->
+
+<!-- MASTER-IP_MD -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=220&text=MASTER-IP_MD&fontSize=55&fontAlignY=35"/>
+
+<!-- A POWERFUL AND BEST WHATSAPP BOT -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=220&text=A+POWERFUL+AND+BEST+WHATSAPP+BOT&fontSize=45&fontAlignY=35"/>
+
+<!-- CODED BY MASTER-IP 🔥 -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=220&text=CODED+BY+MASTER-IP+🔥&fontSize=45&fontAlignY=35"/>
+
+<!-- BEST TECH GENIUS -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=220&text=BEST+TECH+GENIUS&fontSize=45&fontAlignY=35"/>
+
+<!-- THE BEST YOUNG PROGRAMMER -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=220&text=THE+BEST+YOUNG+PROGRAMMER&fontSize=45&fontAlignY=35"/>
 
 ## 📦 Overview
 
