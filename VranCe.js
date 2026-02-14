@@ -512,9 +512,9 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
 
 
     switch (command) {
-    case 'menu':
-    case 'allmenu': {
-      let teks = `Hi @${m.sender.replace(/[^0-9]/g, '')} 👋 ${ucapanWaktu}
+        case 'menu':
+case 'allmenu': {
+  let teks = `Hi @${m.sender.replace(/[^0-9]/g, '')} 👋 ${ucapanWaktu}
 
 🇿🇼*BOT INFORMATION*
 • Botname   : ${botname}
@@ -615,47 +615,51 @@ ${chalk.cyan('🧩 Command  :')} ${chalk.redBright(command)}
 • .jpmch
 *𝕮𝕽𝕰𝓐𝓣𝓞𝓡:𝐌𝐀𝐒𝐓𝐄𝐑-𝐈𝐏 *
 `
-      VranCe.sendMessage(m.chat, {
-        document: {
-          url: thumb
-        },
-        mimetype: "application/vnd.android.package-archive",
-        fileName: `${botname}`,
-        fileLength: 100000000000,
-        caption: teks,
-        contextInfo: {
-          mentionedJid: [m.sender],
-          forwardingScore: 999,
-          isForwarded: true,
-          externalAdReply: {
-            containsAutoReply: true,
-            mediaType: 1,
-            mediaUrl: ``,
-            renderLargerThumbnail: true,
-            showAdAttribution: false,
-            sourceUrl: ``,
-            thumbnailUrl: `${global.thumb}`,
-            title: `${botname.toUpperCase()}`,
-            body: `H𝐞𝐥𝐥𝐨, ${ucapanWaktu} kak 👋`,
-            mentionedJid: [m.sender],
-            isForwarded: true,
-          },
-          forwardedNewsletterMessageInfo: {
-            newsletterJid: chjid + "120363418027651738@newsletter",
-            newsletterName: `${wm}`,
-            serverMessageId: 143
-          },
-          businessMessageForwardInfo: {
-            businessOwnerJid: VranCe.decodeJid(VranCe.user.id)
-          }
-        },
-        footer: `${wm}`,
-        viewOnce: true
-      }, {
-        quoted: fconvert
-      })
-    }
-    break
+
+  // RANDOM THUMBNAIL SETUP
+  const menuImages = [
+    'https://files.catbox.moe/xt88an.jpg',
+    'https://files.catbox.moe/zpknjb.jpg'
+  ]
+  const randomThumb = menuImages[Math.floor(Math.random() * menuImages.length)];
+
+  VranCe.sendMessage(m.chat, {
+    document: { url: thumb },
+    mimetype: "application/vnd.android.package-archive",
+    fileName: `${botname}`,
+    fileLength: 100000000000,
+    caption: teks,
+    contextInfo: {
+      mentionedJid: [m.sender],
+      forwardingScore: 999,
+      isForwarded: true,
+      externalAdReply: {
+        containsAutoReply: true,
+        mediaType: 1,
+        mediaUrl: ``,
+        renderLargerThumbnail: true,
+        showAdAttribution: false,
+        sourceUrl: ``,
+        thumbnailUrl: randomThumb, // ← UPDATED LINE
+        title: `${botname.toUpperCase()}`,
+        body: `H𝐞𝐥𝐥𝐨, ${ucapanWaktu} kak 👋`,
+        mentionedJid: [m.sender],
+        isForwarded: true,
+      },
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: chjid + "120363418027651738@newsletter",
+        newsletterName: `${wm}`,
+        serverMessageId: 143
+      },
+      businessMessageForwardInfo: {
+        businessOwnerJid: VranCe.decodeJid(VranCe.user.id)
+      }
+    },
+    footer: `${wm}`,
+    viewOnce: true
+  }, { quoted: fconvert })
+}
+break
 
     //Mainmenu
 
