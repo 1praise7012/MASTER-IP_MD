@@ -5,7 +5,7 @@ global.PaiCode = "MASTERIP"
 global.sessionName = "session" // Nama file session
 
 global.botname = "𝐌𝐀𝐒𝐓𝐄𝐑-𝐈𝐏_𝐌𝐃" // Bot name
-global.ownername = "𝐌𝐀𝐒𝐓𝐄𝐑-𝐈𝐏 & 𝐓𝐊𝐓_𝐓𝐄𝐂𝐇🇿🇼" // Owner name
+global.ownername = "𝐌𝐀𝐒𝐓𝐄𝐑-𝐈𝐏🇿🇼" // Owner name
 global.owner = "263779540058" // Owner number
 global.botNumber = "263xxx" //  Bot number
 global.version = pack.version // Version
@@ -34,3 +34,4 @@ fs.watchFile(file, () => {
   require(file)
 
 })
+
